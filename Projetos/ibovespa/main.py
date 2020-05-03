@@ -6,7 +6,7 @@ import streamlit as st
 
 yf.pdr_override()
 
-ibovespa_list = pd.read_csv(r"C:\Users\rodri\Projetos\ibovespa\lista_ibovespa.csv", sep = ";", 
+ibovespa_list = pd.read_csv("lista_ibovespa.csv", sep = ";", 
                             encoding = 'utf-8').drop(columns=["Qtde. Teórica"])
 
 ibovespa_list = ibovespa_list.rename(columns = {"Código\xa0":"Symbol", 
